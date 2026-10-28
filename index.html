@@ -13,18 +13,18 @@
 </head>
 <body class="min-h-screen">
     <header>
-        <nav class="bg-pink-300 border-b border-zinc-800 fixed top-0 left-0 right-0 w-full z-[99999]">
+        <nav class="bg-pink-300 border-border-white fixed top-0 left-0 right-0 w-full z-[99999]">
             <div style="max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 65px; display: flex; justify-content: space-between; align-items: center; position: relative;">
-                
-                <div>
+                <div class="logo flex items-center gap-1">
+                    <img src="image-removebg-preview.png" alt="Logo" style="height: 4rem; width: auto; padding-bottom: 9px;">
                     <h2 style="color: white; font-size: 1.5rem; font-weight: bold;"><span class="text-pink-900">桜の</span>公園</h2>
                 </div>
 
                 <div class="navbutton hidden md:flex">
                     <a href="#home">Home</a>
                     <a href="#about">What is</a>
-                    <a href="#main">Main</a>
-                    <a href="#bonus">Bonus</a>
+                    <a href="#main">Park</a>
+                    <a href="#bonus">Highlight</a>
                 </div>
 
                 <button id="menuBtn" class="md:hidden relative w-10 h-10 flex flex-col justify-center items-center group focus:outline-none" aria-label="Menu Toggle">
@@ -35,9 +35,9 @@
 
                 <div id="mobileMenu" class="hidden md:hidden absolute top-full left-0 w-full bg-white border-b border-zinc-800 p-5 space-y-4 shadow-2xl">
                     <a href="#home" class="block text-sm text-slate-300 hover:text-white transition">Home</a>
-                    <a href="#about" class="block text-sm text-slate-300 hover:text-white transition">About</a>
-                    <a href="#main" class="block text-sm text-slate-300 hover:text-white transition">Main</a>
-                    <a href="#bonus" class="block text-sm text-slate-300 hover:text-white transition">Bonus</a>
+                    <a href="#about" class="block text-sm text-slate-300 hover:text-white transition">What is</a>
+                    <a href="#main" class="block text-sm text-slate-300 hover:text-white transition">Park</a>
+                    <a href="#bonus" class="block text-sm text-slate-300 hover:text-white transition">Highlight</a>
                 </div>
 
             </div>
@@ -83,14 +83,24 @@
     </div>
 </section>
     <main class="bg-pink-300">
-                <marquee scrollamount="20" style="color: black; font-family: 'Eurostile Extended', 'Eurostile', sans-serif; font-size: 3rem; font-weight: 700; letter-spacing: 4px; width: 100%; margin-bottom: 2rem; display: flex; opacity: 30%; margin-top: 46px;">
-            CHERRY BLOSSOM PARK - 桜の公園 - CHERRY BLOSSOM PARK - 桜の公園 - CHERRY BLOSSOM PARK - 桜の公園 - CHERRY BLOSSOM PARK - 桜の公園
+                <marquee scrollamount="23" style="padding-top: 20px; color:  black; font-family: 'Eurostile Extended', 'Eurostile', sans-serif; font-size: 5rem; align-items: center; font-weight: 700; letter-spacing: 4px; width: 100%; height: 84px; margin-bottom: 2rem; display: flex; opacity: 30%; margin-top: 46px;">        
+            CHERRY BLOSSOM PARK - 桜の公園 - CHERRY BLOSSOM PARK - 桜の公園 - CHERRY BLOSSOM PARK - 桜の公園 - CHERRY BLOSSOM PARK - 桜の公園 -
+            CHERRY BLOSSOM PARK - 桜の公園 - CHERRY BLOSSOM PARK - 桜の公園 - CHERRY BLOSSOM PARK - 桜の公園 - CHERRY BLOSSOM PARK - 桜の公園 -
+            CHERRY BLOSSOM PARK - 桜の公園 - CHERRY BLOSSOM PARK - 桜の公園 - CHERRY BLOSSOM PARK - 桜の公園 - CHERRY BLOSSOM PARK - 桜の公園 -
         </marquee>
         <!-- PANEL 2: ABOUT SECTION -->
-<section id="about" class="about-section py-24 px-4 sm:px-8 max-w-7xl mx-auto" data-aos="fade-up" data-aos-duration="800">
-    <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6 bg-gray-400 p-6 rounded-3xl border border-white/10 backdrop-blur-xl">
+<section id="about" class="about-section py-24 bg-black  px-4 sm:px-8 max-w-9xl mx-auto" data-aos="fade-up" data-aos-duration="800">
+<div class="relative bg-[#0d0d0d] border border-white/30 rounded-3xl p-6 sm:p-10 max-w-7xl mx-auto shadow-2xl backdrop-blur-xl">
+    
+    <div class="flex items-center space-x-2.5 mb-8 pb-4 border-b border-white/10">
+        <div class="w-3.5 h-3.5 rounded-full bg-[#FF5F56] border border-[#E0443E] hover:opacity-80 transition cursor-pointer"></div>
+        <div class="w-3.5 h-3.5 rounded-full bg-[#FFBD2E] border border-[#DEA123] hover:opacity-80 transition cursor-pointer"></div>
+        <div class="w-3.5 h-3.5 rounded-full bg-[#27C93F] border border-[#1AAB29] hover:opacity-80 transition cursor-pointer"></div>
+    </div>
+
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6 bg-white/[0.03] p-8 rounded-2xl border border-white/5">
         <div>
-            <span class="text-xs font-semibold tracking-widest uppercase text-pink-400 mb-2 block">
+            <span class="text-xs font-semibold tracking-widest uppercase text-pink-400 mb-2 block font-mono">
                 // PROJECT PHILOSOPHY
             </span>
             <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight uppercase" style="font-family: 'Montserrat', sans-serif;">
@@ -101,8 +111,10 @@
             Menghadirkan keindahan destinasi bunga sakura di Jepang melalui perpaduan teknologi web modern dan estetika visual yang mendalam.
         </p>
     </div>
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 bg-black p-6 rounded-3xl border border-white/10 backdrop-blur-xl px-20">
-        <div class="lg:col-span-2 relative overflow-hidden rounded-3xl p-8 sm:p-10 bg-gradient-to-br from-white/[0.07] to-white/[0.02] border border-white/10 backdrop-blur-xl flex flex-col justify-between group hover:border-pink-500/40 transition duration-500">
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        
+        <div class="lg:col-span-2 relative overflow-hidden rounded-2xl p-8 sm:p-10 bg-gradient-to-br from-white/[0.07] to-white/[0.02] border border-white/10 backdrop-blur-xl flex flex-col justify-between group hover:border-pink-500/40 transition duration-500">
             <div class="absolute top-0 right-0 p-8 text-white/5 text-8xl font-black select-none pointer-events-none">桜</div>
             <div>
                 <span class="inline-block px-3 py-1 rounded-full bg-pink-500/10 text-pink-400 text-xs font-mono tracking-wider mb-6 border border-pink-500/20">
@@ -118,7 +130,8 @@
                 <span class="text-pink-400 group-hover:translate-x-1 transition duration-300">EXPLORE &rarr;</span>
             </div>
         </div>
-        <div class="relative overflow-hidden rounded-3xl p-8 sm:p-10 bg-gradient-to-br from-white/[0.07] to-white/[0.02] border border-white/10 backdrop-blur-xl flex flex-col justify-between group hover:border-pink-500/40 transition duration-500">
+
+        <div class="relative overflow-hidden rounded-2xl p-8 sm:p-10 bg-gradient-to-br from-white/[0.07] to-white/[0.02] border border-white/10 backdrop-blur-xl flex flex-col justify-between group hover:border-pink-500/40 transition duration-500">
             <div>
                 <span class="inline-block px-3 py-1 rounded-full bg-white/5 text-gray-300 text-xs font-mono tracking-wider mb-6 border border-white/10">
                     FEATURED 02
@@ -132,7 +145,8 @@
                 <span>MODERN UI/UX</span>
             </div>
         </div>
-        <div class="lg:col-span-3 relative overflow-hidden rounded-3xl p-8 sm:p-10 bg-gradient-to-br from-white/[0.07] to-white/[0.02] border border-white/10 backdrop-blur-xl flex flex-col md:flex-row items-center justify-between gap-6 group hover:border-pink-500/40 transition duration-500">
+
+        <div class="lg:col-span-3 relative overflow-hidden rounded-2xl p-8 sm:p-10 bg-gradient-to-br from-white/[0.07] to-white/[0.02] border border-white/10 backdrop-blur-xl flex flex-col md:flex-row items-center justify-between gap-6 group hover:border-pink-500/40 transition duration-500">
             <div>
                 <span class="inline-block px-3 py-1 rounded-full bg-pink-500/10 text-pink-400 text-xs font-mono tracking-wider mb-3 border border-pink-500/20">
                     FEATURED 03
@@ -149,54 +163,52 @@
         </div>
 
     </div>
+</div>
+        
 </section>
 
         <!-- PANEL 3: MAIN SECTION -->
-        <section id="main" class="flex flex-col gap-12 mt-32 sm:mt-48">
-            <div class="w-full flex justify-center" data-aos="fade-up" data-aos-delay="50" data-aos-duration="150">
-                <h1 class="section-title" style="color: rgb(199, 88, 88);">MAIN</h1>
-            </div>     
-            <div id="footer" class="flex flex-col gap-10 color-white w-full"></div>
-        </section>
+<section id="main" class="relative flex flex-col gap-12 mt-32 sm:mt-48 py-16 px-4 bg-[#14080e] overflow-hidden">
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-pink-600/15 blur-[160px] rounded-full pointer-events-none"></div>
 
-        <!-- PANEL 4: SPECIAL CONDITION (BONUS SECTION) -->
+    <div class="w-full flex justify-center relative z-10" data-aos="fade-up" data-aos-delay="50" data-aos-duration="150">
+        <h1 class="section-title text-4xl sm:text-6xl font-black uppercase tracking-wider text-white drop-shadow-[0_0_20px_rgba(244,114,182,0.4)]">
+            MAIN <span class="text-pink-400">PARK</span>
+        </h1>
+    </div>     
+    <div id="footer" class="relative z-10 flex flex-col gap-10 w-full max-w-5xl mx-auto"></div>
+</section>
+        <!-- PANEL 4: HIGHLIGHT -->
         <section id="bonus" class="flex flex-col mt-32 sm:mt-48">
             <div class="w-full flex justify-center text-center mb-8" data-aos="fade-up" data-aos-delay="50" data-aos-duration="150">
                 <h1 class="section-title text-white">
-                    MORE
+                    HIGHLIGHT
                 </h1>
             </div>  
 
-<div class="domain-card-wrapper">
+<div class="domain-card-wrapper" style="margin-bottom: 300px;">
     <div tabindex="0" class="domain-card bg-[#121212] border border-white/10 rounded-2xl p-6 sm:p-8 overflow-hidden flex flex-col items-center text-center shadow-xl hover:border-pink-500/40 transition duration-300" data-aos="fade-up" data-aos-delay="95" data-aos-duration="250">
         
-        <!-- 1. VIDEO SEBAGAI GANTI IMAGE (Di tengah atas card, dengan border pink/sakura & efek glow) -->
         <div style="width: 100%; max-width: 600px; aspect-ratio: 16 / 9; background-color: #000; border-radius: 16px; overflow: hidden; border: 2px solid rgba(244, 114, 182, 0.4); box-shadow: 0 0 25px rgba(244, 114, 182, 0.2);" class="shrink-0 mb-6">
-            <video src="https://youtu.be/FN-h3R9yxEo" autoplay loop muted playsinline style="width: 100%; height: 100%; object-fit: cover;"></video>
+            <video src="Chureito Pagoda - Yamanashi - 忠霊塔 - 4K Ultra HD.mp4  " autoplay loop muted playsinline style="width: 100%; height: 100%; object-fit: cover;"></video>
         </div>
 
-        <!-- INFORMASI CONTAINER -->
         <div class="w-full flex flex-col items-center space-y-4">
             
-            <!-- 2. TITLE (Nama Inggris - Diperbesar) -->
             <h3 class="text-2xl sm:text-3xl font-extrabold text-white tracking-wide">
                 Chureito <span style="color: rgb(244, 114, 182);">Pagoda</span>
             </h3>
 
-            <!-- 3. JAPANESE NAME (Nama Jepang) -->
             <span class="text-lg sm:text-xl font-bold text-pink-400 font-mono tracking-widest">
                 新倉山浅間公園
             </span>
 
-            <!-- 4. DESCRIPTION (Diperbesar) -->
             <p class="text-sm sm:text-base text-gray-200 italic text-center px-2 max-w-2xl leading-relaxed">
                 "Ikon panorama paling terkenal di Jepang yang memperlihatkan pemandangan magis Pagoda Chureito, bunga sakura yang mekar, dan latar belakang Gunung Fuji."
             </p>
 
-            <!-- BAGIAN BAWAH: HIGHLIGHT (Kanan) & RATE/LOCATION (Kiri) -->
             <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-4 mt-6 pt-5 border-t border-white/15 text-left">
                 
-                <!-- KIRI: Location & Rating -->
                 <div class="flex flex-col justify-center space-y-2">
                     <div class="text-sm text-gray-300">
                         Lokasi: <span class="text-white font-bold text-base">Yamanashi</span>
@@ -206,7 +218,6 @@
                     </div>
                 </div>
 
-                <!-- KANAN: Highlight -->
                 <div class="flex flex-col justify-center bg-white/5 p-4 rounded-xl border border-white/10">
                     <span class="text-xs font-mono uppercase text-pink-400 tracking-wider font-bold mb-1">Highlight</span>
                     <p class="text-sm text-gray-200 leading-relaxed">
@@ -225,10 +236,11 @@
     </main>
 
     <!-- FOOTER -->
-    <footer class="site-footer">
-        <div class="footer-content">
+    <footer class="site-footer" >
+        <div>
+                    <div class="footer-content">
             <div class="footer-logo">
-                DO<span>MES</span>
+                    <h2 style="color: white; font-size: 1.5rem; font-weight: bold;"><span class="text-pink-900" style="color: pink;">桜の</span>公園</h2>
             </div>
 
             <p class="max-w-md text-sm leading-relaxed m-0 text-gray-400">
@@ -239,7 +251,7 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#main">Main</a></li>
-                <li><a href="#bonus">Bonus</a></li>
+                <li><a href="#bonus">Highlight</a></li>
             </ul>
 
             <div class="footer-divider"></div>
@@ -248,6 +260,8 @@
                 &copy; 2026 <b>DOMES</b>. Built with HTML, CSS, and Vanilla JavaScript. All rights reserved.
             </div>
         </div>
+        </div>
+
     </footer>
 
     <!-- KURSOR KUSTOM -->
