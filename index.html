@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DomesReport</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nixie+One&family=Noto+Sans+JP:wght@100..900&family=Sedgwick+Ave+Display&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen">
+    <header>
+        <nav class="bg-pink-300 border-b border-zinc-800 fixed top-0 left-0 right-0 w-full z-[99999]">
+            <div style="max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 65px; display: flex; justify-content: space-between; align-items: center; position: relative;">
+                
+                <div>
+                    <h2 style="color: white; font-size: 1.5rem; font-weight: bold;"><span class="text-pink-900">桜の</span>公園</h2>
+                </div>
+
+                <div class="navbutton hidden md:flex">
+                    <a href="#home">Home</a>
+                    <a href="#about">What is</a>
+                    <a href="#main">Main</a>
+                    <a href="#bonus">Bonus</a>
+                </div>
+
+                <button id="menuBtn" class="md:hidden relative w-10 h-10 flex flex-col justify-center items-center group focus:outline-none" aria-label="Menu Toggle">
+                    <span class="w-6 h-0.5 bg-white rounded-full transition-all duration-300 transform group-[.active]:rotate-45 group-[.active]:translate-y-2"></span>
+                    <span class="w-6 h-0.5 bg-white rounded-full transition-all duration-300 my-1 group-[.active]:opacity-0"></span>
+                    <span class="w-6 h-0.5 bg-white rounded-full transition-all duration-300 transform group-[.active]:-rotate-45 group-[.active]:-translate-y-2"></span>
+                </button>
+
+                <div id="mobileMenu" class="hidden md:hidden absolute top-full left-0 w-full bg-white border-b border-zinc-800 p-5 space-y-4 shadow-2xl">
+                    <a href="#home" class="block text-sm text-slate-300 hover:text-white transition">Home</a>
+                    <a href="#about" class="block text-sm text-slate-300 hover:text-white transition">About</a>
+                    <a href="#main" class="block text-sm text-slate-300 hover:text-white transition">Main</a>
+                    <a href="#bonus" class="block text-sm text-slate-300 hover:text-white transition">Bonus</a>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- PANEL 1: HERO SECTION -->
+<section id="home" class="relative min-h-screen flex flex-col justify-center items-center pt-20" style="position: relative; overflow: hidden;">
+    <div class="hero-video-wrapper" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; overflow: hidden;">
+        <div class="absolute inset-0 bg-black/60 z-10" style="position: absolute; inset: 0; background: rgba(0,0,0,0.6); z-index: 10;"></div>
+        <video autoplay muted loop playsinline class="oke" style="width: 100%; height: 100%; object-fit: cover;">
+            <source src="https://motionbgs.com/media/1435/aesthetic-pastel-clouds.960x540.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="interactive-svg-container floating-svg" style="position: relative; z-index: 25; margin-bottom: 15px; cursor: pointer; will-change: transform; transition: transform 0.15s ease-out;">
+        <svg width="70" height="70" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="40" stroke="rgb(199, 88, 88)" stroke-width="3" filter="drop-shadow(0 0 10px rgb(199, 88, 88))" />
+            <path d="M50 15 L58 42 L85 50 L58 58 L50 85 L42 58 L15 50 L42 42 Z" fill="rgb(199, 88, 88)" />
+        </svg>
+    </div>
+
+    <div class="relative z-20 w-full px-4 text-center">
+        <div class="oke2">
+            <h1 class="font-bold">
+                <span style="font-family: lemon; font-size: clamp(1.2rem, 3vw, 2.5rem);">WELCOME TO </span><br>
+                <span style="font-size: clamp(2.5rem, 7vw, 6rem); font-family: Montserrat;">
+                    <span style="color: pink">桜の</span>公園
+                </span>
+            </h1>
+            <h2 style="font-size: large;"><span>Cherry</span> Blossom Park</h2>
+        </div>
+        <h2 class="text-gray-400 mt-2 text-sm sm:text-base"><i>Made by Yusuf from IDN SOLO VOCATIONAL HIGHSCHOOL</i></h2>
+        
+        <div class="luarbtn" data-aos="zoom-in">
+            <h1 class="text-lg sm:text-xl text-center">Which one would you like to choose?</h1>
+            <div class="btn-group">
+                <a href="#about" class="btnabt"><span class="font-extrabold text-xs">About Website</span></a>
+                <a href="#main" class="btnabta"><span class="font-extrabold text-xs">Get Started</span></a>
+            </div>
+        </div>
+    </div>
+</section>
+    <main class="bg-pink-300">
+                <marquee scrollamount="20" style="color: black; font-family: 'Eurostile Extended', 'Eurostile', sans-serif; font-size: 3rem; font-weight: 700; letter-spacing: 4px; width: 100%; margin-bottom: 2rem; display: flex; opacity: 30%; margin-top: 46px;">
+            CHERRY BLOSSOM PARK - 桜の公園 - CHERRY BLOSSOM PARK - 桜の公園 - CHERRY BLOSSOM PARK - 桜の公園 - CHERRY BLOSSOM PARK - 桜の公園
+        </marquee>
+        <!-- PANEL 2: ABOUT SECTION -->
+<section id="about" class="about-section py-24 px-4 sm:px-8 max-w-7xl mx-auto" data-aos="fade-up" data-aos-duration="800">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6 bg-gray-400 p-6 rounded-3xl border border-white/10 backdrop-blur-xl">
+        <div>
+            <span class="text-xs font-semibold tracking-widest uppercase text-pink-400 mb-2 block">
+                // PROJECT PHILOSOPHY
+            </span>
+            <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight uppercase" style="font-family: 'Montserrat', sans-serif;">
+                THE ESSENCE OF <br><span class="text-pink-400">SAKURA PARADISE.</span>
+            </h2>
+        </div>
+        <p class="text-gray-400 text-sm sm:text-base max-w-md leading-relaxed">
+            Menghadirkan keindahan destinasi bunga sakura di Jepang melalui perpaduan teknologi web modern dan estetika visual yang mendalam.
+        </p>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 bg-black p-6 rounded-3xl border border-white/10 backdrop-blur-xl px-20">
+        <div class="lg:col-span-2 relative overflow-hidden rounded-3xl p-8 sm:p-10 bg-gradient-to-br from-white/[0.07] to-white/[0.02] border border-white/10 backdrop-blur-xl flex flex-col justify-between group hover:border-pink-500/40 transition duration-500">
+            <div class="absolute top-0 right-0 p-8 text-white/5 text-8xl font-black select-none pointer-events-none">桜</div>
+            <div>
+                <span class="inline-block px-3 py-1 rounded-full bg-pink-500/10 text-pink-400 text-xs font-mono tracking-wider mb-6 border border-pink-500/20">
+                    FEATURED 01
+                </span>
+                <h3 class="text-2xl sm:text-3xl font-bold text-white mb-4">Curated Scenic Destinations</h3>
+                <p class="text-gray-300 text-sm sm:text-base leading-relaxed max-w-xl">
+                    Setiap spot wisata dipilih secara teliti untuk menampilkan keajaiban musiman, mulai dari terowongan kelopak bunga hingga pemandangan malam hari (Yozakura) yang memukau.
+                </p>
+            </div>
+            <div class="mt-8 pt-6 border-t border-white/10 flex items-center justify-between text-xs text-gray-400 font-mono">
+                <span>STATUS: ACTIVE & UPDATED</span>
+                <span class="text-pink-400 group-hover:translate-x-1 transition duration-300">EXPLORE &rarr;</span>
+            </div>
+        </div>
+        <div class="relative overflow-hidden rounded-3xl p-8 sm:p-10 bg-gradient-to-br from-white/[0.07] to-white/[0.02] border border-white/10 backdrop-blur-xl flex flex-col justify-between group hover:border-pink-500/40 transition duration-500">
+            <div>
+                <span class="inline-block px-3 py-1 rounded-full bg-white/5 text-gray-300 text-xs font-mono tracking-wider mb-6 border border-white/10">
+                    FEATURED 02
+                </span>
+                <h3 class="text-xl sm:text-2xl font-bold text-white mb-3">Immersive Tech</h3>
+                <p class="text-gray-300 text-sm leading-relaxed">
+                    Dibangun dengan standar performa tinggi, animasi mikro halus, serta navigasi yang responsif di segala perangkat.
+                </p>
+            </div>
+            <div class="mt-8 pt-6 border-t border-white/10 text-xs text-gray-500 font-mono">
+                <span>MODERN UI/UX</span>
+            </div>
+        </div>
+        <div class="lg:col-span-3 relative overflow-hidden rounded-3xl p-8 sm:p-10 bg-gradient-to-br from-white/[0.07] to-white/[0.02] border border-white/10 backdrop-blur-xl flex flex-col md:flex-row items-center justify-between gap-6 group hover:border-pink-500/40 transition duration-500">
+            <div>
+                <span class="inline-block px-3 py-1 rounded-full bg-pink-500/10 text-pink-400 text-xs font-mono tracking-wider mb-3 border border-pink-500/20">
+                    FEATURED 03
+                </span>
+                <h3 class="text-xl sm:text-2xl font-bold text-white">Cultural Heritage & Tradition</h3>
+                <p class="text-gray-300 text-sm leading-relaxed max-w-2xl mt-2">
+                    Mengenal lebih dekat tradisi Hanami dan sejarah di balik keindahan mekarnya bunga sakura yang menjadi simbol ikonik budaya Jepang.
+                </p>
+            </div>
+            <div class="w-full md:w-auto text-right">
+                <span class="text-xs font-mono text-gray-400 block">DEVELOPED BY</span>
+                <span class="text-white font-bold text-sm">Yusuf — IDN Solo</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+        <!-- PANEL 3: MAIN SECTION -->
+        <section id="main" class="flex flex-col gap-12 mt-32 sm:mt-48">
+            <div class="w-full flex justify-center" data-aos="fade-up" data-aos-delay="50" data-aos-duration="150">
+                <h1 class="section-title" style="color: rgb(199, 88, 88);">MAIN</h1>
+            </div>     
+            <div id="footer" class="flex flex-col gap-10 color-white w-full"></div>
+        </section>
+
+        <!-- PANEL 4: SPECIAL CONDITION (BONUS SECTION) -->
+        <section id="bonus" class="flex flex-col mt-32 sm:mt-48">
+            <div class="w-full flex justify-center text-center mb-8" data-aos="fade-up" data-aos-delay="50" data-aos-duration="150">
+                <h1 class="section-title text-white">
+                    MORE
+                </h1>
+            </div>  
+
+<div class="domain-card-wrapper">
+    <div tabindex="0" class="domain-card bg-[#121212] border border-white/10 rounded-2xl p-6 sm:p-8 overflow-hidden flex flex-col items-center text-center shadow-xl hover:border-pink-500/40 transition duration-300" data-aos="fade-up" data-aos-delay="95" data-aos-duration="250">
+        
+        <!-- 1. VIDEO SEBAGAI GANTI IMAGE (Di tengah atas card, dengan border pink/sakura & efek glow) -->
+        <div style="width: 100%; max-width: 600px; aspect-ratio: 16 / 9; background-color: #000; border-radius: 16px; overflow: hidden; border: 2px solid rgba(244, 114, 182, 0.4); box-shadow: 0 0 25px rgba(244, 114, 182, 0.2);" class="shrink-0 mb-6">
+            <video src="https://youtu.be/FN-h3R9yxEo" autoplay loop muted playsinline style="width: 100%; height: 100%; object-fit: cover;"></video>
+        </div>
+
+        <!-- INFORMASI CONTAINER -->
+        <div class="w-full flex flex-col items-center space-y-4">
+            
+            <!-- 2. TITLE (Nama Inggris - Diperbesar) -->
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-white tracking-wide">
+                Chureito <span style="color: rgb(244, 114, 182);">Pagoda</span>
+            </h3>
+
+            <!-- 3. JAPANESE NAME (Nama Jepang) -->
+            <span class="text-lg sm:text-xl font-bold text-pink-400 font-mono tracking-widest">
+                新倉山浅間公園
+            </span>
+
+            <!-- 4. DESCRIPTION (Diperbesar) -->
+            <p class="text-sm sm:text-base text-gray-200 italic text-center px-2 max-w-2xl leading-relaxed">
+                "Ikon panorama paling terkenal di Jepang yang memperlihatkan pemandangan magis Pagoda Chureito, bunga sakura yang mekar, dan latar belakang Gunung Fuji."
+            </p>
+
+            <!-- BAGIAN BAWAH: HIGHLIGHT (Kanan) & RATE/LOCATION (Kiri) -->
+            <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-4 mt-6 pt-5 border-t border-white/15 text-left">
+                
+                <!-- KIRI: Location & Rating -->
+                <div class="flex flex-col justify-center space-y-2">
+                    <div class="text-sm text-gray-300">
+                        Lokasi: <span class="text-white font-bold text-base">Yamanashi</span>
+                    </div>
+                    <div class="text-sm text-gray-300">
+                        Rating: <span class="text-pink-400 font-extrabold text-base">5.0 / 5.0</span>
+                    </div>
+                </div>
+
+                <!-- KANAN: Highlight -->
+                <div class="flex flex-col justify-center bg-white/5 p-4 rounded-xl border border-white/10">
+                    <span class="text-xs font-mono uppercase text-pink-400 tracking-wider font-bold mb-1">Highlight</span>
+                    <p class="text-sm text-gray-200 leading-relaxed">
+                        Pemandangan 3-in-1 terbaik: Gunung Fuji, Pagoda Merah, dan Cherry Blossom.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+        </section>
+    </main>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                DO<span>MES</span>
+            </div>
+
+            <p class="max-w-md text-sm leading-relaxed m-0 text-gray-400">
+                A high-performance glassmorphic web application cataloging all Domain Expansions from <i>Jujutsu Kaisen</i>.
+            </p>
+
+            <ul class="footer-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#main">Main</a></li>
+                <li><a href="#bonus">Bonus</a></li>
+            </ul>
+
+            <div class="footer-divider"></div>
+
+            <div class="footer-copyright">
+                &copy; 2026 <b>DOMES</b>. Built with HTML, CSS, and Vanilla JavaScript. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- KURSOR KUSTOM -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

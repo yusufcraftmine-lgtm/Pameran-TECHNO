@@ -1,0 +1,52 @@
+[
+  {
+    "id": "shinjuku-gyoen",
+    "title": "Shinjuku Gyoen National Garden",
+    "japanese_name": "新宿御苑",
+    "location": "Tokyo",
+    "description": "Taman luas di jantung kota Tokyo yang mengombinasikan gaya taman tradisional Jepang, Prancis, dan Inggris. Memiliki lebih dari 1.000 pohon sakura dari 60 varietas berbeda.",
+    "highlight": "Varietas sakura beragam yang mekar secara bertahap dari awal hingga akhir musim.",
+    "image_url": "https://images.unsplash.com/photo-1522383225653-ed111181a951?auto=format&fit=crop&w=1200&q=80",
+    "rating": "4.9"
+  },
+  {
+    "id": "chureito-pagoda",
+    "title": "Chureito Pagoda & Lake Kawaguchi",
+    "japanese_name": "新倉山浅間公園",
+    "location": "Yamanashi",
+    "description": "Ikon panorama paling terkenal di Jepang yang memperlihatkan pemandangan magis Pagoda Chureito, bunga sakura yang mekar, dan latar belakang Latar Gunung Fuji.",
+    "highlight": "Pemandangan 3-in-1 terbaik: Gunung Fuji, Pagoda Merah, dan Cherry Blossom.",
+    "image_url": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1200&q=80",
+    "rating": "5.0"
+  },
+  {
+    "id": "philosophers-path",
+    "title": "Philosopher's Path",
+    "japanese_name": "哲学の道",
+    "location": "Kyoto",
+    "description": "Jalur setapak batu yang membentang sekitar 2 km di sepanjang kanal berair jernih, dinaungi ratusan pohon sakura yang membentuk terowongan merah muda.",
+    "highlight": "Suasana tradisional Kyoto yang tenang dengan guguran kelopak sakura di permukaan kanal.",
+    "image_url": "https://images.unsplash.com/photo-1492571350019-22de08371fd3?auto=format&fit=crop&w=1200&q=80",
+    "rating": "4.8"
+  },
+  {
+    "id": "hirosaki-park",
+    "title": "Hirosaki Castle Park",
+    "japanese_name": "弘前公園",
+    "location": "Aomori",
+    "description": "Destinasi sakura nomor satu di wilayah utara Jepang. Memiliki lebih dari 2.600 pohon sakura yang melingkupi Kastil Hirosaki dan parit bersejarahnya.",
+    "highlight": "Fenomena 'Hana-ikada' (Karpet Bunga), di mana permukaan parit tertutup sepenuhnya oleh kelopak sakura.",
+    "image_url": "https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=1200&q=80",
+    "rating": "4.9"
+  },
+  {
+    "id": "meguro-river",
+    "title": "Meguro River Cherry Blossoms",
+    "japanese_name": "目黒川",
+    "location": "Tokyo",
+    "description": "Sekitar 800 pohon sakura membentang di sepanjang Sungai Meguro. Sangat ramai dan hidup, terutama saat malam hari dengan festival lampion.",
+    "highlight": "Night Yozakura (Sakura Malam) dengan pencahayaan lampion tradisional yang eksotis.",
+    "image_url": "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=1200&q=80",
+    "rating": "4.8"
+  }
+]

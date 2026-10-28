@@ -1,0 +1,409 @@
+/* RESET & GLOBAL STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+html, body, * {
+    cursor: none;
+}
+
+html {
+    scroll-behavior: smooth;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #030712;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* FONTS */
+@font-face {
+    font-family: 'lemon';
+    src: url('LEMONMILK-Medium.otf');
+}
+@font-face {
+    font-family: 'bebasneue'; 
+    src: url('bebas_neue/BebasNeue-Reguler.woff2') format('woff2'),
+         url('bebas_neue/BebasNeue-Reguler.woff') format('woff');
+}
+
+.nixie-one-regular {
+    font-family: "Nixie One", system-ui;
+    font-weight: 400;
+}
+
+nav {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.navbutton {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.navbutton a {
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    letter-spacing: 1.5px;
+}
+
+.navbutton a:hover {
+    color: rgb(199, 88, 88);
+}
+
+.hero-video-bg {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.oke {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.9;
+}
+
+.luarbtn {
+    background-color: rgba(64, 64, 64, 0.4);
+    backdrop-filter: blur(12px);          
+    -webkit-backdrop-filter: blur(12px);  
+    border: 1px solid rgba(255, 255, 255, 0.15); 
+    width: 90%;
+    max-width: 600px;
+    border-radius: 23px;
+    padding: 20px 15px;
+    margin: 20px auto 0;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.btnabt, .btnabta {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Nixie One", sans-serif;
+    background-color: pink;
+    backdrop-filter: blur(10px);          
+    -webkit-backdrop-filter: blur(10px);  
+    border: 1px solid rgba(255, 255, 255, 0.4); 
+    color: white; 
+    border-radius: 13px;
+    width: 140px;
+    height: 42px;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.2); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+}
+
+.btnabt:hover, .btnabta:hover {
+    transform: scale(1.08) translateY(-6px);
+    box-shadow: 0 0 35px white;
+}
+
+
+.cursor-dot, .cursor-ring {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    border-radius: 50%;
+    z-index: 99999;
+}
+
+.cursor-dot {
+    width: 8px;
+    height: 8px;
+    background-color: cyan;
+    box-shadow: 0 0 10px cyan, 0 0 20px cyan;
+}
+
+.cursor-ring {
+    width: 40px;
+    height: 40px;
+    border: 2px solid cyan;
+    transition: width 0.1s ease, height 0.1s ease;
+}
+
+/* ABOUT SECTION RESPONSIF */
+.about-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 16px;
+}
+
+.abt-sct {
+    background-color: rgba(64, 64, 64, 0.4); 
+    backdrop-filter: blur(12px);        
+    -webkit-backdrop-filter: blur(12px); 
+    border: 1px solid rgba(255, 255, 255, 0.15); 
+    border-radius: 23px;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.abt-sct img {
+    width: 100%;
+    max-width: 925px;
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+/* MAIN CARDS RESPONSIF (JSON DATA & BONUS) */
+.domain-card-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0 16px;
+}
+
+.domain-card {
+    width: 100%;
+    max-width: 1200px;
+    min-height: auto;
+    padding: 24px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    
+    display: flex;
+    flex-direction: row; /* Desktop/Laptop: Menyamping */
+    align-items: center;
+    gap: 30px;
+    
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), 
+                box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+                border-color 0.4s ease;
+    outline: none; 
+    cursor: pointer;
+}
+
+.domain-card-img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 5px solid #ffffff;
+    flex-shrink: 0;
+}
+
+.domain-card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+.domain-card:hover {
+    transform: translate(6px, -6px) scale(1.01);
+    box-shadow: 0 12px 35px 0 rgba(0, 0, 0, 0.3),
+                0 0 30px 8px rgba(199, 88, 88, 0.3) !important;
+    border-color: rgba(199, 88, 88, 0.6) !important;
+}
+
+.domain-card:focus {
+    transform: translate(10px, -10px) scale(1.02);
+    box-shadow: 0 20px 45px 0 rgba(0, 0, 0, 0.5),
+                0 0 45px 12px rgba(199, 88, 88, 0.5) !important;
+    border-color: rgba(199, 88, 88, 0.9) !important;
+}
+
+/* SECTION TITLES RESPONSIF */
+.section-title {
+    font-size: clamp(3.5rem, 9vw, 9rem);
+    font-weight: 800;
+    font-family: sans-serif;
+    text-align: center;
+    width: 100%;
+    line-height: 1;
+}
+
+/* FOOTER RESPONSIF */
+.site-footer {
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 40px 20px;
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: rgb(190, 190, 190);
+    width: 100%;
+}
+
+.footer-content {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-logo {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 4px;
+    color: #ffffff;
+}
+
+.footer-logo span {
+    color: rgb(199, 88, 88);
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links a {
+    color: rgb(160, 160, 160);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: rgb(199, 88, 88);
+}
+
+.footer-divider {
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 10px 0;
+}
+
+.footer-copyright {
+    font-size: 0.85rem;
+    color: rgb(120, 120, 120);
+}
+
+/* ========================================================== */
+/* MEDIA QUERIES UNTUK BERBAGAI DEVICE (Tablet, HP, Smartwatch) */
+/* ========================================================== */
+
+/* TABLET & LAPTOP KECIL (Maksimal 1024px) */
+@media (max-width: 1024px) {
+    .domain-card {
+        flex-direction: column; /* Ubah layout kartu jadi bertumpuk di layar sedang */
+        text-align: center;
+    }
+    
+    .domain-card-img {
+        max-width: 100%;
+    }
+}
+
+/* SMARTPHONE & HP (Maksimal 768px) */
+@media (max-width: 768px) {
+    /* Matikan kursor kustom di HP agar tidak mengganggu touch screen */
+    .cursor-dot, .cursor-ring {
+        display: none !important;
+    }
+    html, body, * {
+        cursor: auto !important;
+    }
+
+    .luarbtn {
+        width: 95%;
+    }
+
+    .abt-sct h2 {
+        font-size: 2.2rem !important;
+    }
+
+    .abt-sct h4 {
+        font-size: 1.1rem !important;
+    }
+
+    .domain-card {
+        padding: 16px;
+        gap: 16px;
+    }
+
+    .site-footer {
+        margin-top: 5rem;
+    }
+}
+
+/* SMARTWATCH & LAYAR ULTRA-KECIL (Maksimal 320px) */
+@media (max-width: 320px) {
+    .section-title {
+        font-size: 2.2rem !important;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn-group {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@font-face {
+    font-family: 'Eurostile Extended';
+    src: url('path-to-your-font/EurostileExtended.woff2') format('woff2');
+}
+
+.floating-svg {
+    animation: floatAnim 4s ease-in-out infinite alternate;
+}
+
+@keyframes floatAnim {
+    0% { transform: translateY(0px) rotate(0deg); }
+    100% { transform: translateY(-12px) rotate(3deg); }
+}
