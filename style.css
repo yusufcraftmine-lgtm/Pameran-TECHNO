@@ -464,3 +464,24 @@ section,
 div[id] {
   scroll-margin-top: 100px;
 }
+
+.laptop-screen-container {
+    top: 6.8%;
+    left: 12.5%;
+    width: 75%;
+    height: 77%;
+    border-radius: 4px 4px 0 0;
+}
+
+.phone-screen-container {
+    top: 3%;
+    left: 6.8%;
+    width: 86.4%;
+    height: 94%;
+    border-radius: 20px;
+}
+@supports not (backdrop-filter: blur(10px)) {
+    .laptop-screen-container, .phone-screen-container {
+        box-shadow: 0 0 20px rgba(244, 114, 182, 0.4);
+    }
+}
