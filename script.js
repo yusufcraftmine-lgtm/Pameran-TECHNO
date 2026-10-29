@@ -1,65 +1,65 @@
 // NAVIGATION MOBILE MENU TOGGLE
-const menuBtn = document.getElementById('menuBtn');
-const mobileMenu = document.getElementById('mobileMenu');
+const menuBtn = document.getElementById("menuBtn");
+const mobileMenu = document.getElementById("mobileMenu");
 
 if (menuBtn && mobileMenu) {
-    menuBtn.addEventListener('click', () => {
-        menuBtn.classList.toggle('active');
-        mobileMenu.classList.toggle('hidden');
-    });
+  menuBtn.addEventListener("click", () => {
+    menuBtn.classList.toggle("active");
+    mobileMenu.classList.toggle("hidden");
+  });
 
-    mobileMenu.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            menuBtn.classList.remove('active');
-            mobileMenu.classList.add('hidden');
-        });
+  mobileMenu.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      menuBtn.classList.remove("active");
+      mobileMenu.classList.add("hidden");
     });
+  });
 }
 
 // CUSTOM CURSOR ANIMATION (DIPERBAIKI)
-const dot = document.getElementById('cursorDot');
-const ring = document.getElementById('cursorRing');
+const dot = document.getElementById("cursorDot");
+const ring = document.getElementById("cursorRing");
 
 let mouseX = 0;
 let mouseY = 0;
 
-window.addEventListener('mousemove', (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
+window.addEventListener("mousemove", (e) => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
 });
 
 function updateCursor() {
-    if (dot && ring) {
-        dot.style.transform = `translate(${mouseX - 4}px, ${mouseY - 4}px)`;
-        ring.style.transform = `translate(${mouseX - 20}px, ${mouseY - 20}px)`;
-    }
-    requestAnimationFrame(updateCursor);
+  if (dot && ring) {
+    dot.style.transform = `translate(${mouseX - 4}px, ${mouseY - 4}px)`;
+    ring.style.transform = `translate(${mouseX - 20}px, ${mouseY - 20}px)`;
+  }
+  requestAnimationFrame(updateCursor);
 }
 updateCursor();
 
 // INITIALIZE AOS (Animate On Scroll)
 AOS.init({
-    once: true
+  once: true,
 });
 
 // FETCH DOMAIN DATA JSON & RENDER RESPONSIF
 const foter = document.getElementById("footer");
 
 const getData = async () => {
-    try {
-        const res = await fetch('./domain-data.json');
-        const data = await res.json();
+  try {
+    const res = await fetch("./domain-data.json");
+    const data = await res.json();
 
-        const dataMap = data.map((items) => {
-            let targetPage = `${items.id}.html`; 
+    const dataMap = data.map((items) => {
+      let targetPage = `${items.id}.html`;
 
-            return `
+      return `
 <!-- WRAPPER LEBIH LEBAR KE SAMPING -->
 <div class="domain-card-wrapper w-full flex justify-center px-4">
     <div onclick="window.location.href='${targetPage}'" tabindex="0" class="domain-card w-full max-w-[1000rem] bg-[#1c0c16]/85 border border-pink-500/30 rounded-3xl p-6 sm:p-12 overflow-hidden flex flex-col items-center text-center shadow-[0_0_40px_rgba(244,114,182,0.15)] hover:border-pink-500/80 hover:scale-[1.01] backdrop-blur-xl transition duration-300 cursor-pointer group" data-aos="fade-up" data-aos-delay="95" data-aos-duration="250">
         
         <div class="w-full h-[300px] sm:h-[420px] overflow-hidden rounded-2xl mb-6 bg-black/50 border border-pink-500/30 shadow-[0_0_25px_rgba(244,114,182,0.2)] flex justify-center items-center">
-            <img src="${items.id === 'hirosaki-park' ? 'https://www.japan-guide.com/g20/740/3700_01.jpg' : items.image_url}" alt="${items.title}" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
+            <img src="${items.id === "hirosaki-park" ? "https://www.japan-guide.com/g20/740/3700_01.jpg" : items.image_url}" alt="${items.title}" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
         </div>
     
         <div class="w-full flex flex-col items-center space-y-4">
@@ -101,52 +101,52 @@ const getData = async () => {
     </div>
 </div>
             `;
-        });
+    });
 
-        const foter = document.getElementById('footer');
-        if (foter) {
-            foter.innerHTML = dataMap.join("");
-        }
-    } catch (error) {
-        console.error("Gagal memuat data lokal:", error);
+    const foter = document.getElementById("footer");
+    if (foter) {
+      foter.innerHTML = dataMap.join("");
     }
+  } catch (error) {
+    console.error("Gagal memuat data lokal:", error);
+  }
 };
 
 getData();
-document.querySelectorAll('.interactive-svg-container').forEach(svgBox => {
-    const pushDistance = 45; 
-    const triggerRadius = 150; 
+document.querySelectorAll(".interactive-svg-container").forEach((svgBox) => {
+  const pushDistance = 45;
+  const triggerRadius = 150;
 
-    document.addEventListener('mousemove', (e) => {
-        const rect = svgBox.getBoundingClientRect();
-        const svgCenterX = rect.left + rect.width / 2;
-        const svgCenterY = rect.top + rect.height / 2;
+  document.addEventListener("mousemove", (e) => {
+    const rect = svgBox.getBoundingClientRect();
+    const svgCenterX = rect.left + rect.width / 2;
+    const svgCenterY = rect.top + rect.height / 2;
 
-        const deltaX = e.clientX - svgCenterX;
-        const deltaY = e.clientY - svgCenterY;
-        const distance = Math.hypot(deltaX, deltaY);
+    const deltaX = e.clientX - svgCenterX;
+    const deltaY = e.clientY - svgCenterY;
+    const distance = Math.hypot(deltaX, deltaY);
 
-        if (distance < triggerRadius) {
-            const angle = Math.atan2(deltaY, deltaX);
-            const force = (triggerRadius - distance) / triggerRadius;
+    if (distance < triggerRadius) {
+      const angle = Math.atan2(deltaY, deltaX);
+      const force = (triggerRadius - distance) / triggerRadius;
 
-            const moveX = -Math.cos(angle) * force * pushDistance;
-            const moveY = -Math.sin(angle) * force * pushDistance;
+      const moveX = -Math.cos(angle) * force * pushDistance;
+      const moveY = -Math.sin(angle) * force * pushDistance;
 
-            svgBox.style.transform = `translate3d(${moveX}px, ${moveY}px, 0px)`;
-            svgBox.classList.remove('floating-svg'); 
-        } else {
-            svgBox.style.transform = `translate3d(0px, 0px, 0px)`;
-            svgBox.classList.add('floating-svg'); 
-        }
-    });
+      svgBox.style.transform = `translate3d(${moveX}px, ${moveY}px, 0px)`;
+      svgBox.classList.remove("floating-svg");
+    } else {
+      svgBox.style.transform = `translate3d(0px, 0px, 0px)`;
+      svgBox.classList.add("floating-svg");
+    }
+  });
 });
 
-const navLinks = document.querySelectorAll('.navbutton .nav-link');
+const navLinks = document.querySelectorAll(".navbutton .nav-link");
 
-navLinks.forEach(link => {
-    link.addEventListener('click', function() {
-        navLinks.forEach(nav => nav.classList.remove('active'));
-        this.classList.add('active');
-    });
+navLinks.forEach((link) => {
+  link.addEventListener("click", function () {
+    navLinks.forEach((nav) => nav.classList.remove("active"));
+    this.classList.add("active");
+  });
 });
