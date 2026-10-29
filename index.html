@@ -13,35 +13,51 @@
 </head>
 <body class="min-h-screen">
     <header>
-        <nav class="bg-pink-300 border-border-white fixed top-0 left-0 right-0 w-full z-[99999]">
-            <div style="max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 65px; display: flex; justify-content: space-between; align-items: center; position: relative;">
-                <div class="logo flex items-center gap-1 px-20 " style="background-color: rgb(204, 128, 141); border-radius: 9px">
-                    <img src="image-removebg-preview.png" alt="Logo" style="height: 4rem; width: auto; padding-bottom: 9px;">
-                    <h2 style="color: white; font-size: 1.5rem; font-weight: bold;"><span class="text-pink-900">桜の</span>公園</h2>
-                </div>
+<nav class="fixed top-6 left-0 right-0 w-full z-[99999] px-4 flex justify-center bg-transparent pointer-events-none">
+    <div class="nav-container pointer-events-auto">
+        
+<div class="logo flex items-center gap-3">
+    <div class="p-1.5 bg-[#cc808d] rounded-xl shadow-[0_0_15px_rgba(204,128,141,0.4)] flex items-center justify-center">
+        <img src="image-removebg-preview.png" alt="Logo" class="h-7 w-auto">
+    </div>
+    <h2 class="text-white text-lg font-bold tracking-wide">
+        <span class="text-pink-400">桜の</span>公園
+    </h2>
+</div>
 
-                <div class="navbutton hidden md:flex">
-                    <a href="#home">Home</a>
-                    <a href="#about">What is</a>
-                    <a href="#main">Park</a>
-                    <a href="#bonus">Highlight</a>
-                </div>
+        <div class="navbutton hidden md:flex">
+            <a href="#home" class="nav-link active" data-target="home">Home</a>
+            <a href="#about" class="nav-link" data-target="about">What is</a>
+            <a href="#main" class="nav-link" data-target="main">Park</a>
+            <a href="#bonus" class="nav-link" data-target="bonus">Highlight</a>
+        </div>
 
-                <button id="menuBtn" class="md:hidden relative w-10 h-10 flex flex-col justify-center items-center group focus:outline-none" aria-label="Menu Toggle">
-                    <span class="w-6 h-0.5 bg-white rounded-full transition-all duration-300 transform group-[.active]:rotate-45 group-[.active]:translate-y-2"></span>
-                    <span class="w-6 h-0.5 bg-white rounded-full transition-all duration-300 my-1 group-[.active]:opacity-0"></span>
-                    <span class="w-6 h-0.5 bg-white rounded-full transition-all duration-300 transform group-[.active]:-rotate-45 group-[.active]:-translate-y-2"></span>
-                </button>
-
-                <div id="mobileMenu" class="hidden md:hidden absolute top-full left-0 w-full bg-white border-b border-zinc-800 p-5 space-y-4 shadow-2xl">
-                    <a href="#home" class="block text-sm text-slate-300 hover:text-white transition">Home</a>
-                    <a href="#about" class="block text-sm text-slate-300 hover:text-white transition">What is</a>
-                    <a href="#main" class="block text-sm text-slate-300 hover:text-white transition">Park</a>
-                    <a href="#bonus" class="block text-sm text-slate-300 hover:text-white transition">Highlight</a>
-                </div>
-
+        <div class="flex items-center gap-3">
+            <div class="temp-badge hidden sm:flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-pink-500/40 bg-pink-500/10 text-xs font-mono text-gray-200 shadow-[0_0_20px_rgba(244,114,182,0.25)]">
+                <span class="w-2 h-2 rounded-full bg-pink-400 animate-pulse shadow-[0_0_8px_#f472b6]"></span>
+                <span>JAPAN TEMP: <strong class="text-pink-300">18°C</strong></span>
             </div>
-        </nav>
+
+            <button id="menuBtn" class="md:hidden relative w-10 h-10 flex flex-col justify-center items-center group focus:outline-none" aria-label="Menu Toggle">
+                <span class="w-6 h-0.5 bg-pink-300 rounded-full transition-all duration-300 transform group-[.active]:rotate-45 group-[.active]:translate-y-2"></span>
+                <span class="w-6 h-0.5 bg-pink-300 rounded-full transition-all duration-300 my-1 group-[.active]:opacity-0"></span>
+                <span class="w-6 h-0.5 bg-pink-300 rounded-full transition-all duration-300 transform group-[.active]:-rotate-45 group-[.active]:-translate-y-2"></span>
+            </button>
+        </div>
+
+        <div id="mobileMenu" class="hidden md:hidden absolute top-[calc(100%+12px)] left-0 w-full bg-[#1c0c16]/95 border border-pink-500/40 backdrop-blur-xl rounded-2xl p-5 space-y-4 shadow-[0_0_35px_rgba(244,114,182,0.3)]">
+            <a href="#home" class="block text-sm text-gray-300 hover:text-pink-400 transition">Home</a>
+            <a href="#about" class="block text-sm text-gray-300 hover:text-pink-400 transition">What is</a>
+            <a href="#main" class="block text-sm text-gray-300 hover:text-pink-400 transition">Park</a>
+            <a href="#bonus" class="block text-sm text-gray-300 hover:text-pink-400 transition">Highlight</a>
+            <div class="pt-2 border-t border-pink-500/20 text-xs font-mono text-pink-300 flex items-center justify-between">
+                <span>JAPAN TEMP</span>
+                <strong class="text-white">18°C</strong>
+            </div>
+        </div>
+
+    </div>
+</nav>
     </header>
 
     <main>
@@ -65,13 +81,13 @@
         <div class="oke2">
             <h1 class="font-bold">
                 <span style="font-family: lemon; font-size: clamp(1.2rem, 3vw, 2.5rem);">WELCOME TO </span><br>
-                <span style="font-size: clamp(2.5rem, 7vw, 6rem); font-family: Montserrat;">
-                    <span style="color: pink">桜の</span>公園
-                </span>
+<span style="font-size: clamp(2.5rem, 7vw, 6rem); font-family: 'Montserrat', sans-serif; text-shadow: 0 0 20px rgba(244,114,182,0.6), 0 0 40px rgba(244,114,182,0.3);">
+    <span style="color: pink">桜の</span>公園
+</span>
             </h1>
             <h2 style="font-size: large;"><span>Cherry</span> Blossom Park</h2>
         </div>
-        <h2 class="text-gray-400 mt-2 text-sm sm:text-base"><i>Made by Yusuf from IDN SOLO VOCATIONAL HIGHSCHOOL</i></h2>
+        <h2 class="text-gray-400 mt-2 text-sm sm:text-base"><i>Made by Yusuf X RPL A</i></h2>
         
         <div class="luarbtn" data-aos="zoom-in">
             <h1 class="text-lg sm:text-xl text-center">Which one would you like to choose?</h1>
@@ -169,7 +185,7 @@
 
         <!-- PANEL 3: MAIN SECTION -->
 <section id="main" class="relative flex flex-col gap-12 mt-32 sm:mt-48 py-16 px-4 sm:px-8 bg-[#14080e] overflow-hidden">
-    <!-- Efek glow pink diperbesar agar lebarnya pas dengan card baru -->
+
     <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] bg-pink-600/15 blur-[180px] rounded-full pointer-events-none"></div>
 
     <div class="w-full flex justify-center relative z-10" data-aos="fade-up" data-aos-delay="50" data-aos-duration="150">
@@ -177,8 +193,6 @@
             MAIN <span class="text-pink-400">PARK</span>
         </h1>
     </div>    
-    
-    <!-- max-w-5xl diubah jadi max-w-7xl agar background & card-nya ikut memanjang secara optimal -->
     <div id="footer" class="relative z-10 flex flex-col gap-10 w-full max-w-7xl mx-auto"></div>
 </section>
         <!-- PANEL 4: HIGHLIGHT -->

@@ -14,6 +14,7 @@ html {
     scroll-behavior: smooth;
     width: 100%;
     overflow-x: hidden;
+    scroll-padding-top: 100px;
 }
 
 body {
@@ -23,9 +24,9 @@ body {
     width: 100%;
     overflow-x: hidden;
     position: relative;
+    padding-top: 90px;
 }
 
-/* FONTS */
 @font-face {
     font-family: 'lemon';
     src: url('LEMONMILK-Medium.otf');
@@ -41,30 +42,65 @@ body {
     font-weight: 400;
 }
 
-nav {
+.nav-container {
     width: 100%;
+    max-width: 1150px;
+    background-color: rgba(20, 8, 14, 0.9);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(244, 114, 182, 0.4);
+    border-radius: 9999px; 
+    padding: 10px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 40px rgba(244, 114, 182, 0.3), inset 0 0 20px rgba(244, 114, 182, 0.1);
+    position: relative;
     box-sizing: border-box;
 }
 
 .navbutton {
     display: flex;
-    gap: 30px;
+    gap: 32px;
     align-items: center;
+    position: relative;
 }
 
 .navbutton a {
     font-family: "Montserrat", sans-serif;
-    color: black;
+    color: rgba(255, 255, 255, 0.75);
     text-decoration: none;
-    font-size: 14px;
+    font-size: 0.95rem;
     font-weight: 500;
     transition: color 0.3s ease;
-    letter-spacing: 1.5px;
-    font-size: 1.25rem;
+    letter-spacing: 1px;
+    position: relative;
+    padding-bottom: 4px;
 }
 
 .navbutton a:hover {
-    color: rgb(199, 88, 88);
+    color: #ffffff;
+}
+
+.navbutton a.active {
+    color: #ffffff;
+}
+
+.navbutton a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #f472b6;
+    box-shadow: 0 0 12px #f472b6, 0 0 20px #f472b6;
+    border-radius: 2px;
+    transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navbutton a.active::after {
+    width: 100%;
 }
 
 .hero-video-bg {
@@ -315,7 +351,7 @@ nav {
 }
 
 .footer-links a:hover {
-    color: rgb(199, 88, 88);
+    color: whitesmoke;
 }
 
 .footer-divider {
@@ -330,14 +366,9 @@ nav {
     color: rgb(120, 120, 120);
 }
 
-/* ========================================================== */
-/* MEDIA QUERIES UNTUK BERBAGAI DEVICE (Tablet, HP, Smartwatch) */
-/* ========================================================== */
-
-/* TABLET & LAPTOP KECIL (Maksimal 1024px) */
 @media (max-width: 1024px) {
     .domain-card {
-        flex-direction: column; /* Ubah layout kartu jadi bertumpuk di layar sedang */
+        flex-direction: column;
         text-align: center;
     }
     
@@ -345,10 +376,7 @@ nav {
         max-width: 100%;
     }
 }
-
-/* SMARTPHONE & HP (Maksimal 768px) */
 @media (max-width: 768px) {
-    /* Matikan kursor kustom di HP agar tidak mengganggu touch screen */
     .cursor-dot, .cursor-ring {
         display: none !important;
     }
@@ -377,8 +405,6 @@ nav {
         margin-top: 5rem;
     }
 }
-
-/* SMARTWATCH & LAYAR ULTRA-KECIL (Maksimal 320px) */
 @media (max-width: 320px) {
     .section-title {
         font-size: 2.2rem !important;
@@ -407,4 +433,8 @@ nav {
 @keyframes floatAnim {
     0% { transform: translateY(0px) rotate(0deg); }
     100% { transform: translateY(-12px) rotate(3deg); }
+}
+
+section, div[id] {
+    scroll-margin-top: 100px; 
 }
