@@ -6,7 +6,7 @@
     "location": "Tokyo",
     "description": "Taman luas di jantung kota Tokyo yang mengombinasikan gaya taman tradisional Jepang, Prancis, dan Inggris. Memiliki lebih dari 1.000 pohon sakura dari 60 varietas berbeda.",
     "highlight": "Varietas sakura beragam yang mekar secara bertahap dari awal hingga akhir musim.",
-    "image_url": "https://images.unsplash.com/photo-1522383225653-ed111181a951?auto=format&fit=crop&w=1200&q=80",
+    "image_url": "https://s3-ap-northeast-1.amazonaws.com/thegate/2021/04/14/11/31/14/shinjukugyoen.jpg",
     "rating": "4.9"
   },
   {
@@ -16,7 +16,7 @@
     "location": "Yamanashi",
     "description": "Ikon panorama paling terkenal di Jepang yang memperlihatkan pemandangan magis Pagoda Chureito, bunga sakura yang mekar, dan latar belakang Latar Gunung Fuji.",
     "highlight": "Pemandangan 3-in-1 terbaik: Gunung Fuji, Pagoda Merah, dan Cherry Blossom.",
-    "image_url": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1200&q=80",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvq23vwrolanuQFXUG6ii02NW8J2YLCZqfsnoPA2R02GZNDzjrsgbECs0&s=10",
     "rating": "5.0"
   },
   {
@@ -46,7 +46,7 @@
     "location": "Tokyo",
     "description": "Sekitar 800 pohon sakura membentang di sepanjang Sungai Meguro. Sangat ramai dan hidup, terutama saat malam hari dengan festival lampion.",
     "highlight": "Night Yozakura (Sakura Malam) dengan pencahayaan lampion tradisional yang eksotis.",
-    "image_url": "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=1200&q=80",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQ0jR9OOmP4mBsqQ-BTRb9k2jtqEWY7fi1yVIvHHozuktUR29ZKqYA10pA&s=10",
     "rating": "4.8"
   }
 ]

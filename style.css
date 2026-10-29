@@ -108,12 +108,13 @@ nav {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    font-family: "Nixie One", sans-serif;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 600;
     background-color: pink;
     backdrop-filter: blur(10px);          
     -webkit-backdrop-filter: blur(10px);  
     border: 1px solid rgba(255, 255, 255, 0.4); 
-    color: white; 
+    color: rgb(48, 48, 48); 
     border-radius: 13px;
     width: 140px;
     height: 42px;
@@ -187,7 +188,6 @@ nav {
     object-fit: cover;
 }
 
-/* MAIN CARDS RESPONSIF (JSON DATA & BONUS) */
 .domain-card-wrapper {
     width: 100%;
     display: flex;

@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DomesReport</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nixie+One&family=Noto+Sans+JP:wght@100..900&family=Sedgwick+Ave+Display&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nixie+One&family=Noto+Sans+JP:wght@100..900&family=Sedgwick+Ave+Display&family=Space+Grotesk:wght@300..700&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -15,7 +15,7 @@
     <header>
         <nav class="bg-pink-300 border-border-white fixed top-0 left-0 right-0 w-full z-[99999]">
             <div style="max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 65px; display: flex; justify-content: space-between; align-items: center; position: relative;">
-                <div class="logo flex items-center gap-1">
+                <div class="logo flex items-center gap-1 px-20 " style="background-color: rgb(204, 128, 141); border-radius: 9px">
                     <img src="image-removebg-preview.png" alt="Logo" style="height: 4rem; width: auto; padding-bottom: 9px;">
                     <h2 style="color: white; font-size: 1.5rem; font-weight: bold;"><span class="text-pink-900">桜の</span>公園</h2>
                 </div>
@@ -76,8 +76,8 @@
         <div class="luarbtn" data-aos="zoom-in">
             <h1 class="text-lg sm:text-xl text-center">Which one would you like to choose?</h1>
             <div class="btn-group">
-                <a href="#about" class="btnabt"><span class="font-extrabold text-xs">About Website</span></a>
-                <a href="#main" class="btnabta"><span class="font-extrabold text-xs">Get Started</span></a>
+                <a href="#about" class="btnabt"><span class="font-semibold text-xs">About Website</span></a>
+                <a href="#main" class="btnabta"><span class="font-semibold text-xs">Get Started</span></a>
             </div>
         </div>
     </div>
@@ -168,15 +168,18 @@
 </section>
 
         <!-- PANEL 3: MAIN SECTION -->
-<section id="main" class="relative flex flex-col gap-12 mt-32 sm:mt-48 py-16 px-4 bg-[#14080e] overflow-hidden">
-    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-pink-600/15 blur-[160px] rounded-full pointer-events-none"></div>
+<section id="main" class="relative flex flex-col gap-12 mt-32 sm:mt-48 py-16 px-4 sm:px-8 bg-[#14080e] overflow-hidden">
+    <!-- Efek glow pink diperbesar agar lebarnya pas dengan card baru -->
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] bg-pink-600/15 blur-[180px] rounded-full pointer-events-none"></div>
 
     <div class="w-full flex justify-center relative z-10" data-aos="fade-up" data-aos-delay="50" data-aos-duration="150">
         <h1 class="section-title text-4xl sm:text-6xl font-black uppercase tracking-wider text-white drop-shadow-[0_0_20px_rgba(244,114,182,0.4)]">
             MAIN <span class="text-pink-400">PARK</span>
         </h1>
-    </div>     
-    <div id="footer" class="relative z-10 flex flex-col gap-10 w-full max-w-5xl mx-auto"></div>
+    </div>    
+    
+    <!-- max-w-5xl diubah jadi max-w-7xl agar background & card-nya ikut memanjang secara optimal -->
+    <div id="footer" class="relative z-10 flex flex-col gap-10 w-full max-w-7xl mx-auto"></div>
 </section>
         <!-- PANEL 4: HIGHLIGHT -->
         <section id="bonus" class="flex flex-col mt-32 sm:mt-48">
@@ -244,27 +247,25 @@
             </div>
 
             <p class="max-w-md text-sm leading-relaxed m-0 text-gray-400">
-                A high-performance glassmorphic web application cataloging all Domain Expansions from <i>Jujutsu Kaisen</i>.
+                Celebrating the timeless beauty of <i>Japan's cherry blossoms.</i> A digital sanctuary of pink petals and unforgettable spring destinations.
             </p>
 
             <ul class="footer-links">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#main">Main</a></li>
+                <li><a href="#about">What Is</a></li>
+                <li><a href="#main">Park</a></li>
                 <li><a href="#bonus">Highlight</a></li>
             </ul>
 
             <div class="footer-divider"></div>
 
             <div class="footer-copyright">
-                &copy; 2026 <b>DOMES</b>. Built with HTML, CSS, and Vanilla JavaScript. All rights reserved.
+                &copy; 2026 <b>桜の公園</b>. Built with HTML, CSS, and Vanilla JavaScript. All rights reserved.
             </div>
         </div>
         </div>
 
     </footer>
-
-    <!-- KURSOR KUSTOM -->
     <div class="cursor-dot" id="cursorDot"></div>
     <div class="cursor-ring" id="cursorRing"></div>
 
